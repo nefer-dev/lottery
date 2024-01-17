@@ -9,7 +9,7 @@ import java.util.List;
 public class SecondPlaceTest {
 
     @Test
-    public void winTheFirstPlace() {
+    public void winTheSecondPlace() {
         User user = new User("Kiley", "C111111");
         user.addLotteryTicket(new LotteryTicket("2", new ArrayList<>(List.of(1,2,3,4,5,7))));
 
