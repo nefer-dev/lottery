@@ -1,6 +1,7 @@
 package com.nefer;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class LotteryTicket {
@@ -13,8 +14,25 @@ public class LotteryTicket {
         this.lotteryNumbers = lotteryNumbers;
     }
 
-    private List<Integer> getRankingList() {
-        return new ArrayList<>();
+    public Ranking getRanking(ArrayList<Integer> numbers) {
+        Collections.sort(this.lotteryNumbers);
+        Collections.sort(numbers);
+        int numberOfCorrectLotteryNumbers = 0;
 
+        for (int i = 0; i < this.lotteryNumbers.size(); i++) {
+            if(this.lotteryNumbers.get(i).equals(numbers.get(i))) {
+                numberOfCorrectLotteryNumbers += 1;
+            }
+        }
+
+        if(numberOfCorrectLotteryNumbers == 6) {
+            return Ranking.FIRST;
+        }
+        else if(numberOfCorrectLotteryNumbers == 5) {
+            return Ranking.SECOND;
+        }
+        else {
+            return Ranking.LOSE;
+        }
     }
 }

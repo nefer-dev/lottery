@@ -4,9 +4,13 @@ import java.util.ArrayList;
 
 public class WinningNumbers {
 
-    private ArrayList<Integer> numbers;
+    private ArrayList<Integer> winningNumberList;
 
-    public WinningNumbers(ArrayList<Integer> numbers) {
-        this.numbers = numbers;
+    public WinningNumbers(ArrayList<Integer> winningNumberList) {
+        this.winningNumberList = winningNumberList;
+    }
+
+    public ArrayList<Integer> getWinningNumberList() {
+        return winningNumberList;
     }
 }
