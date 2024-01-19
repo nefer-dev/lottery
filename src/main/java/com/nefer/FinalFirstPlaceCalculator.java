@@ -1,7 +1,8 @@
 package com.nefer;
 
 import java.util.ArrayList;
-
+import java.util.Random;
+import java.util.random.*;
 public class FinalFirstPlaceCalculator {
 
     private ArrayList<FinalFirstCandidate> arr;
@@ -15,7 +16,12 @@ public class FinalFirstPlaceCalculator {
 
     }
 
-    private void draw() {
+
+
+    public Integer draw() {
+        Random random = new Random();
+        return random.nextInt(this.arr.size());
+
 
     }
 
