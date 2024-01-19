@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RandomTest {
+public class FinalWinnerRandomDrawTest {
 
     @Test
     public void test() {
