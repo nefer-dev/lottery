@@ -7,11 +7,13 @@ public class User {
     private String name;
     private String studentId;
     private ArrayList<LotteryTicket> lotteryTicketList;
+    private Integer secondPlaceWinningStack;
 
     public User(String name, String studentId) {
         this.name = name;
         this.studentId = studentId;
         this.lotteryTicketList = new ArrayList<>();
+        this.secondPlaceWinningStack = 0;
     }
 
     public void addLotteryTicket(LotteryTicket lotteryTicket) {
@@ -28,5 +30,17 @@ public class User {
         }
 
         return rankings;
+    }
+
+    public void increaseSecondPlaceWinningStack() {
+        this.secondPlaceWinningStack += 1;
+    }
+
+    public Integer getSecondPlaceWinningStack() {
+        return secondPlaceWinningStack;
+    }
+
+    public void setSecondPlaceWinningStack(Integer secondPlaceWinningStack) {
+        this.secondPlaceWinningStack = secondPlaceWinningStack;
     }
 }

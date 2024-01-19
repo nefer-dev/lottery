@@ -8,6 +8,8 @@ import java.util.List;
 
 public class FinalWinnerRandomDrawTest {
 
+    private static final Integer secondPlaceWinningStackSize = 5;
+
     @Test
     public void test() {
         User user = new User("aaa", "C333333");
@@ -30,6 +32,10 @@ public class FinalWinnerRandomDrawTest {
                 finalFirstPlaceCalculator.add(new FinalFirstCandidate(user));
             }
 
+            else if(ranking == Ranking.SECOND) {
+                user.increaseSecondPlaceWinningStack();
+            }
+
         }
 
         Assertions.assertThat(finalFirstPlaceCalculator.getArr().size()).isEqualTo((7));
@@ -40,6 +46,18 @@ public class FinalWinnerRandomDrawTest {
         }
 
 
+
+        //second place calculate -> need test
+        int secondPlaceWinningStack = user.getSecondPlaceWinningStack();
+        int share = secondPlaceWinningStack / secondPlaceWinningStackSize;
+        int remainder = secondPlaceWinningStack % secondPlaceWinningStackSize;
+
+
+        for (int i = 0; i < share; i++) {
+            finalFirstPlaceCalculator.add(new FinalFirstCandidate(user));
+        }
+
+        user.setSecondPlaceWinningStack(remainder);
     }
 
 }
