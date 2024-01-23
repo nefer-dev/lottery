@@ -24,9 +24,7 @@ public class User {
         ArrayList<Ranking> rankings = new ArrayList<>();
         for (LotteryTicket lotteryTicket : lotteryTicketList) {
             Ranking ranking = lotteryTicket.getRanking(winningLotteryNumbers);
-
             rankings.add(ranking);
-
         }
 
         return rankings;

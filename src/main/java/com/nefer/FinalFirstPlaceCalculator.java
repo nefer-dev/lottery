@@ -16,8 +16,6 @@ public class FinalFirstPlaceCalculator {
 
     }
 
-
-
     public Integer draw() {
         Random random = new Random();
         return random.nextInt(this.arr.size());
