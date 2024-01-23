@@ -9,19 +9,27 @@ import java.util.stream.IntStream;
 
 public class AutoLotteryGenerator {
 
+    private String id;
+
+    public AutoLotteryGenerator() {
+        this.id = "0";
+    }
+
     public LotteryTicket generate(){
-        LotteryTicket test = new LotteryTicket(createId(),createNumbers());
-        return test;
+        return new LotteryTicket(createId(),createNumbers());
     }
 
 
     private String createId(){
-        return "";
+        String tmp = this.id;
+        int number = Integer.parseInt(tmp);
+        number += 1;
+        return Integer.toString(number);
     }
+
     private ArrayList<Integer> createNumbers(){
-        ArrayList<Integer> test = new Random()
+        return new Random()
                 .ints(6,1,11).boxed()
                 .distinct().collect(Collectors.toCollection(ArrayList<Integer>::new));
-        return test;
     }
 }
