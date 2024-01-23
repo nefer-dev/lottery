@@ -14,6 +14,10 @@ public class LotteryTicket {
         this.lotteryNumbers = lotteryNumbers;
     }
 
+    public LotteryTicket(ArrayList<Integer> lotteryNumbers) {
+        this.lotteryNumbers = lotteryNumbers;
+    }
+
     public Ranking getRanking(ArrayList<Integer> numbers) {
         Collections.sort(this.lotteryNumbers);
         Collections.sort(numbers);
