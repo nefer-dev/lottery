@@ -8,5 +8,8 @@ public class FinalFirstCandidate {
         this.user = user;
     }
 
+    public User getUser() {
+        return user;
+    }
 
 }

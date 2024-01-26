@@ -109,4 +109,8 @@ public class LotteryController {
 
 
     }
+
+    private User finalChoose(FinalFirstPlaceCalculator test){
+        return test.selectFinalWinner();
+    }
 }

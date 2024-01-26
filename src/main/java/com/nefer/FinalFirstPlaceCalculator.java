@@ -19,11 +19,13 @@ public class FinalFirstPlaceCalculator {
     public Integer draw() {
         Random random = new Random();
         return random.nextInt(this.arr.size());
-
-
     }
 
     public ArrayList<FinalFirstCandidate> getArr() {
         return this.arr;
+    }
+
+    public User selectFinalWinner(){
+        return arr.get(draw()).getUser();
     }
 }
