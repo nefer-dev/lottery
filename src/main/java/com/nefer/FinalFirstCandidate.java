@@ -11,4 +11,5 @@ public class FinalFirstCandidate {
     public User getUser() {
         return user;
     }
+
 }
