@@ -29,7 +29,7 @@ public class DropdownController {
         System.out.println("Dropdown 3: " + dropdown3);
         System.out.println("Dropdown 4: " + dropdown4);
         System.out.println("Dropdown 5: " + dropdown5);
-        System.out.println("Dropdown 5: " + dropdown6);
+        System.out.println("Dropdown 6: " + dropdown6);
 
         // You can add your business logic here
 
