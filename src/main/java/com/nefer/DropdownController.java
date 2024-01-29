@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 public class DropdownController {
 
@@ -24,15 +27,18 @@ public class DropdownController {
             @RequestParam(value="dropdown6") String dropdown6) {
 
         // Process the selected values from the dropdowns
-        System.out.println("Dropdown 1: " + dropdown1);
-        System.out.println("Dropdown 2: " + dropdown2);
-        System.out.println("Dropdown 3: " + dropdown3);
-        System.out.println("Dropdown 4: " + dropdown4);
-        System.out.println("Dropdown 5: " + dropdown5);
-        System.out.println("Dropdown 6: " + dropdown6);
+        ArrayList<Integer> inputLotteryNumbers = new ArrayList<>(List.of(1, 2, 3, 4, 5, 6));
 
-        // You can add your business logic here
+        LotteryNumberInputValidator lotteryNumberInputValidator = new LotteryNumberInputValidator();
 
-        return "redirect:/";  // Redirect to the home page after processing
+        boolean result = lotteryNumberInputValidator.checkForDuplicateLotteryNumbers(inputLotteryNumbers);
+
+        if(!result) {
+            return "redirect:/";
+        }
+        else {
+            return "done";
+        }
+
     }
 }
