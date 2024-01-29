@@ -8,6 +8,7 @@ public class LotteryTicket {
 
     private String id;
     private ArrayList<Integer> lotteryNumbers;
+    private OpenDate date;
 
     public LotteryTicket(String id, ArrayList<Integer> lotteryNumbers) {
         this.id = id;
@@ -39,4 +40,10 @@ public class LotteryTicket {
             return Ranking.LOSE;
         }
     }
+
+    public String getDate() {
+        return date.printOpenDate();
+    }
+
+
 }
