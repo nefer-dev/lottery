@@ -38,7 +38,7 @@ public class FinalWinnerRandomDrawTest {
 
         }
 
-        Assertions.assertThat(finalFirstPlaceCalculator.getArr().size()).isEqualTo((7));
+        Assertions.assertThat(finalFirstPlaceCalculator.getArr().size()).isEqualTo((2));
 
         for (int i = 0; i < 10; i++) {
             Assertions.assertThat(finalFirstPlaceCalculator.draw()).isGreaterThan(-1);
