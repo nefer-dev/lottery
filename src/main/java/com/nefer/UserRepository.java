@@ -13,10 +13,6 @@ public class UserRepository {
         this.userList = new ArrayList<>();
     }
 
-    private boolean duplicateUser(User user) {
-        return true;
-    }
-
     public void add(User user) {
         this.userList.add(user);
     }
@@ -30,4 +26,6 @@ public class UserRepository {
 
         return null;
     }
+
+
 }
