@@ -1,5 +1,6 @@
 package com.nefer.controller;
 
+import com.nefer.Member;
 import com.nefer.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,17 +13,22 @@ public class FormController {
     @Autowired
     private MemberRepository memberRepository;
     
-    @GetMapping("/members/new")
+    @GetMapping("/members")
     public String userForm(){
         System.out.println("memberRepository = " + memberRepository);
         return "form";
     }
 
-    @PostMapping("/members/new")
+    @PostMapping("/members")
     public String userSubmit(@RequestParam("name") String name) {
 
-        System.out.println("name = " + name);
-        return "redirect:/";
+        Member member = memberRepository.findByName(name);
+        if(member == null) {
+            return "form-no-name";
+        }
+        else {
+            return "index";
+        }
 
     }
 }
