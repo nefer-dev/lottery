@@ -12,7 +12,10 @@ public class MemberRepositoryTest {
 
         Assertions.assertThat(memberRepository.findByName("전지윤")).isNotNull();
         Assertions.assertThat(memberRepository.findByName("와이게될까")).isNotNull();
+
+        memberRepository.delete("와이게될까");
         memberRepository.delete("전지윤");
+        Assertions.assertThat(memberRepository.findByName("와이게될까")).isNull();
         Assertions.assertThat(memberRepository.findByName("전지윤")).isNull();
 
     }
