@@ -49,6 +49,7 @@ public class DropdownController {
     @GetMapping("/test")
     public String test() {
         System.out.println("this.memberRepository = " + this.memberRepository);
+        System.out.println(this.memberRepository.findByName("전지윤").getName().equals("전지윤"));
         return "index";
     }
 }
