@@ -1,5 +1,7 @@
-package com.nefer;
+package com.nefer.controller;
 
+import com.nefer.Member;
+import com.nefer.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
