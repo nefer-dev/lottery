@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class FormController {
     
     @Autowired
-    private UserRepository userRepository;
+    private MemberRepository memberRepository;
     
     @GetMapping("/members/new")
     public String userForm(){
-        System.out.println("userRepository = " + userRepository);
+        System.out.println("memberRepository = " + memberRepository);
         return "form";
     }
 

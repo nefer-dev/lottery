@@ -14,7 +14,7 @@ import java.util.List;
 public class DropdownController {
     
     @Autowired
-    private UserRepository userRepository;
+    private MemberRepository memberRepository;
 
     @GetMapping("/")
     public String showDropdownPage() {
@@ -48,7 +48,7 @@ public class DropdownController {
     
     @GetMapping("/test")
     public String test() {
-        System.out.println("this.userRepository = " + this.userRepository);
+        System.out.println("this.memberRepository = " + this.memberRepository);
         return "index";
     }
 }

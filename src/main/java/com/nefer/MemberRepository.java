@@ -5,11 +5,11 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 
 @Repository
-public class UserRepository {
+public class MemberRepository {
 
     private ArrayList<Member> memberList;
 
-    public UserRepository() {
+    public MemberRepository() {
         this.memberList = new ArrayList<>();
     }
 
