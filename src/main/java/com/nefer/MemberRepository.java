@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class MemberRepository {
 
     private ArrayList<Member> memberList;
+    private Long memberIndex = 0L;
 
     public MemberRepository() {
         this.memberList = new ArrayList<>();
@@ -16,6 +17,12 @@ public class MemberRepository {
 
     public void add(Member member) {
         this.memberList.add(member);
+        this.memberIndex++;
+    }
+
+    public void delete(String name) {
+        Member memberFoundByName = this.findByName(name);
+        this.memberList.remove(memberFoundByName);
     }
 
     public Member findByName(String name) {
@@ -29,19 +36,25 @@ public class MemberRepository {
     }
 
     private void initializeMembers() {
-        this.add(new Member(1L, "전지윤"));
-        this.add(new Member(2L, "조용준"));
-        this.add(new Member(3L, "강성현"));
-        this.add(new Member(4L, "정준영"));
-        this.add(new Member(5L, "김지수"));
-        this.add(new Member(6L, "성지훈"));
-        this.add(new Member(7L, "김강석"));
-        this.add(new Member(8L, "김지안"));
-        this.add(new Member(9L, "이승훈"));
-        this.add(new Member(10L, "이가인"));
-        this.add(new Member(11L, "박유빈"));
-        this.add(new Member(12L, "양준서"));
-        this.add(new Member(13L, "한아현"));
+        ArrayList<String> memberNames = new ArrayList<>();
+        memberNames.add("전지윤");
+        memberNames.add("조용준");
+        memberNames.add("강성현");
+        memberNames.add("정준영");
+        memberNames.add("김지수");
+        memberNames.add("성지훈");
+        memberNames.add("김강석");
+        memberNames.add("김지안");
+        memberNames.add("이승훈");
+        memberNames.add("이가인");
+        memberNames.add("박유빈");
+        memberNames.add("양준서");
+        memberNames.add("한아현");
+        for (String memberName : memberNames) {
+            this.add(new Member(this.memberIndex, memberName));
+
+        }
+
     }
 
 }
