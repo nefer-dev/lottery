@@ -15,8 +15,8 @@ public class MemberRepository {
         this.initializeMembers();
     }
 
-    public void add(Member member) {
-        this.memberList.add(member);
+    public void add(String name) {
+        this.memberList.add(new Member(this.memberIndex, name));
         this.memberIndex++;
     }
 
@@ -51,7 +51,7 @@ public class MemberRepository {
         memberNames.add("양준서");
         memberNames.add("한아현");
         for (String memberName : memberNames) {
-            this.add(new Member(this.memberIndex, memberName));
+            this.add(memberName);
 
         }
 

@@ -8,8 +8,10 @@ public class MemberRepositoryTest {
     @Test
     public void test() {
         MemberRepository memberRepository = new MemberRepository();
-        Assertions.assertThat(memberRepository.findByName("전지윤")).isNotNull();
+        memberRepository.add("와이게될까");
 
+        Assertions.assertThat(memberRepository.findByName("전지윤")).isNotNull();
+        Assertions.assertThat(memberRepository.findByName("와이게될까")).isNotNull();
         memberRepository.delete("전지윤");
         Assertions.assertThat(memberRepository.findByName("전지윤")).isNull();
 
