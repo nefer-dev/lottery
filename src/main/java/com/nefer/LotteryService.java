@@ -3,7 +3,7 @@ package com.nefer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LotteryController {
+public class LotteryService {
 
     private static final Integer secondPlaceWinningStackSize = 5;
 
