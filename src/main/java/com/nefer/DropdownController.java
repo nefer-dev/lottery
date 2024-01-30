@@ -47,7 +47,8 @@ public class DropdownController {
     }
     
     @GetMapping("/test")
-    public void test() {
+    public String test() {
         System.out.println("this.userRepository = " + this.userRepository);
+        return "index";
     }
 }
