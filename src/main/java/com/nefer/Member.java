@@ -2,7 +2,7 @@ package com.nefer;
 
 import java.util.ArrayList;
 
-public class User {
+public class Member {
 
     private Long id;
     private String name;
@@ -10,14 +10,14 @@ public class User {
     private ArrayList<LotteryTicket> lotteryTicketList;
     private Integer secondPlaceWinningStack;
 
-    public User(Long id, String name) {
+    public Member(Long id, String name) {
         this.id = id; //0L
         this.name = name;
         this.lotteryTicketList = new ArrayList<>();
         this.secondPlaceWinningStack = 0;
     }
 
-    public User(String name, String studentId) {
+    public Member(String name, String studentId) {
         this.name = name;
         this.studentId = studentId;
         this.lotteryTicketList = new ArrayList<>();

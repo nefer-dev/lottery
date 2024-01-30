@@ -7,25 +7,24 @@ import java.util.ArrayList;
 @Repository
 public class UserRepository {
 
-    private ArrayList<User> userList;
+    private ArrayList<Member> memberList;
 
     public UserRepository() {
-        this.userList = new ArrayList<>();
+        this.memberList = new ArrayList<>();
     }
 
-    public void add(User user) {
-        this.userList.add(user);
+    public void add(Member member) {
+        this.memberList.add(member);
     }
 
-    public User findByName(String name) {
-        for (User user : userList) {
-            if(user.getName().equals(name)) {
-                return user;
+    public Member findByName(String name) {
+        for (Member member : memberList) {
+            if(member.getName().equals(name)) {
+                return member;
             }
         }
 
         return null;
     }
-
 
 }

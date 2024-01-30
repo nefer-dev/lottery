@@ -2,7 +2,7 @@ package com.nefer;
 
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.random.*;
+
 public class FinalFirstPlaceCalculator {
 
     private ArrayList<FinalFirstCandidate> arr;
@@ -25,7 +25,7 @@ public class FinalFirstPlaceCalculator {
         return this.arr;
     }
 
-    public User selectFinalWinner(){
+    public Member selectFinalWinner(){
         return arr.get(draw()).getUser();
     }
 }

@@ -2,14 +2,14 @@ package com.nefer;
 
 public class FinalFirstCandidate {
 
-    private User user;
+    private Member member;
 
-    public FinalFirstCandidate(User user) {
-        this.user = user;
+    public FinalFirstCandidate(Member member) {
+        this.member = member;
     }
 
-    public User getUser() {
-        return user;
+    public Member getUser() {
+        return member;
     }
 
 }

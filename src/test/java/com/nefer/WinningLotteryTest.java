@@ -10,10 +10,10 @@ public class WinningLotteryTest {
 
     @Test
     public void winTheFirstPlace() {
-        User user = new User("Judy", "C000000");
-        user.addLotteryTicket(new LotteryTicket("1", new ArrayList<>(List.of(1,2,3,4,5,6))));
+        Member member = new Member("Judy", "C000000");
+        member.addLotteryTicket(new LotteryTicket("1", new ArrayList<>(List.of(1,2,3,4,5,6))));
 
-        ArrayList<Ranking> rankingList = user.getRankingList(new ArrayList<>(List.of(1, 2, 3, 4, 5, 6)));
+        ArrayList<Ranking> rankingList = member.getRankingList(new ArrayList<>(List.of(1, 2, 3, 4, 5, 6)));
 
         Assertions.assertThat(rankingList.size()).isEqualTo(1);
         Assertions.assertThat(rankingList.get(0)).isEqualTo(Ranking.FIRST);
