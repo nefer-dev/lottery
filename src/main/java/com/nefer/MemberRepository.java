@@ -1,5 +1,6 @@
 package com.nefer;
 
+import com.nefer.domain.member.Member;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -55,6 +56,10 @@ public class MemberRepository {
 
         }
 
+    }
+
+    public ArrayList<Member> getMemberList() {
+        return this.memberList;
     }
 
 }
