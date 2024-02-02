@@ -1,4 +1,4 @@
-package com.nefer;
+package com.nefer.domain.ticket;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;

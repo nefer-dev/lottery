@@ -1,8 +1,9 @@
-package com.nefer;
+package com.nefer.domain.ticket;
+
+import com.nefer.domain.member.Ranking;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 public class LotteryTicket {
 

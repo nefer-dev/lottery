@@ -1,4 +1,4 @@
-package com.nefer;
+package com.nefer.util;
 
 import java.util.ArrayList;
 import java.util.HashSet;

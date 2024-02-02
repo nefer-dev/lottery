@@ -1,6 +1,6 @@
 package com.nefer.controller;
 
-import com.nefer.Member;
+import com.nefer.domain.member.Member;
 import com.nefer.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

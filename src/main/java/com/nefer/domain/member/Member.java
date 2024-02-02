@@ -1,4 +1,6 @@
-package com.nefer;
+package com.nefer.domain.member;
+
+import com.nefer.domain.ticket.LotteryTicket;
 
 import java.util.ArrayList;
 

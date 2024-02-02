@@ -1,7 +1,7 @@
 package com.nefer.controller;
 
 
-import com.nefer.LotteryNumberInputValidator;
+import com.nefer.util.LotteryNumberInputValidator;
 import com.nefer.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
